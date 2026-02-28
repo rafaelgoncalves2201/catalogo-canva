@@ -1,0 +1,591 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fbf7f2;  /* bege claríssimo base */
+      color: #1e1b18;
+      font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, .btn, .badge, .tagline, .hero-small, .nav-links {
+      font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+
+    /* ========== PALETA LUXO ========== */
+    :root {
+      --bege-claro: #f3ede7;
+      --bege-medio: #e8ddd2;
+      --dourado-suave: #cbb59b;
+      --dourado-escuro: #b79e84;
+      --preto-elegante: #2a2724;
+      --preto: #1f1d1a;
+      --cinza-suave: #9f948a;
+      --sombra-light: 0 12px 28px -10px rgba(0, 0, 0, 0.05);
+      --sombra-hover: 0 25px 35px -14px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ========== BOTÕES ========== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--preto-elegante);
+      color: white;
+      padding: 1rem 2.8rem;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 0.95rem;
+      letter-spacing: 2.8px;
+      text-transform: uppercase;
+      border: 1px solid var(--preto-elegante);
+      transition: all 0.3s ease;
+      border-radius: 0px;
+      box-shadow: var(--sombra-light);
+      gap: 0.5rem;
+    }
+
+    .btn:hover {
+      background: transparent;
+      color: var(--preto-elegante);
+      transform: translateY(-3px);
+      box-shadow: var(--sombra-hover);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--preto-elegante);
+      border: 1px solid var(--preto-elegante);
+    }
+
+    .btn-outline:hover {
+      background: var(--preto-elegante);
+      color: #fff;
+    }
+
+    /* etiqueta / selo */
+    .badge {
+      display: inline-block;
+      background: var(--bege-medio);
+      color: var(--preto-elegante);
+      font-size: 1.2rem;
+      letter-spacing: 3px;
+      padding: 0.4rem 1.8rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      border: none;
+    }
+
+    /* ========== TIPOGRAFIA ========== */
+    .section-title {
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      font-weight: 300;
+      text-align: left;
+      margin-bottom: 1.2rem;
+      color: var(--preto);
+    }
+
+    .section-sub {
+      text-align: center;
+      color: var(--cinza-suave);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 2.5rem auto;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 200;
+    }
+
+    /* ========== HERO — fiel às imagens ========== */
+    .hero {
+      background: #faf5ef;
+      padding: 2rem 0 3rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-mockup {
+      display: inline-block;   /* adapta ao conteúdo */
+      background: #f0e6dc;     /* seu bege */
+      padding: 12px;           /* espaço atrás da imagem */
+      border-radius: 8px;
+      box-shadow: 18px 18px 0 var(--dourado-suave);
+    }
+
+    .hero-mockup:hover {
+      transform: scale(1.01);
+      box-shadow: 22px 22px 0 var(--dourado-escuro);
+    }
+
+    .hero-content .badge {
+      margin-bottom: 1rem;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.5rem, 4.5vw, 4rem);
+      font-weight: 200;
+      line-height: 1.1;
+      color: var(--preto);
+      margin-bottom: 1rem;
+    }
+
+    .hero-content h1 strong {
+      font-weight: 400;
+      color: var(--preto-elegante);
+      border-bottom: 1px solid var(--dourado-suave);
+    }
+
+    .hero-sub {
+      font-size: 1.3rem;
+      color: #5b534b;
+      margin-bottom: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    /* ========== BENEFÍCIOS (lista vertical) ========== */
+    .benefits-vertical {
+      max-width: 600px;
+      margin: 2rem auto 0;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--bege-medio);
+      font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .benefit-item:last-child {
+      border-bottom: none;
+    }
+
+    .benefit-icon {
+      font-size: 1.8rem;
+      color: var(--dourado-suave);
+      min-width: 50px;
+      text-align: center;
+    }
+
+    /* ========== PRÉVIA (cards mockup) ========== */
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .preview-card {
+      background: white;
+      box-shadow: var(--sombra-light);
+      transition: 0.3s;
+    }
+
+    .preview-card:hover {
+      box-shadow: var(--sombra-hover);
+      transform: translateY(-5px);
+    }
+
+    .preview-image {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background-color: #e2d7cf;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* capa */
+    .preview-card:nth-child(1) .preview-image {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 300 400%22><rect width=%22300%22 height=%22400%22 fill=%22%23cbb59b%22/><text x=%2240%22 y=%22120%22 fill=%22%23fff%22 font-family=%22Montserrat%22 font-size=%2224%22>CAPA</text><text x=%2240%22 y=%22200%22 fill=%22%23f3ede7%22>TABELA DE VALORES</text></svg>');
+    }
+    /* procedimentos */
+    .preview-card:nth-child(2) .preview-image {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 300 400%22><rect width=%22300%22 height=%22400%22 fill=%22%23e8ddd2%22/><text x=%2230%22 y=%2280%22 fill=%22%232a2724%22 font-size=%2218%22>PROCEDIMENTOS</text><text x=%2230%22 y=%22140%22>FOX   R$ 149</text><text x=%2230%22 y=%22190%22>FIO A FIO  R$ 99</text></svg>');
+    }
+    /* valores */
+    .preview-card:nth-child(3) .preview-image {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 300 400%22><rect width=%22300%22 height=%22400%22 fill=%22%23d2bfae%22/><text x=%2230%22 y=%2280%22 fill=%22%23000%22 font-size=%2220%22>TABELA DE VALORES</text><text x=%2230%22 y=%22150%22>Fox ................. R$149</text><text x=%2230%22 y=%22200%22>Volume ......... R$199</text></svg>');
+    }
+
+    .preview-caption {
+      padding: 1.2rem;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      background: white;
+    }
+
+    /* ========== FORMAS DE PAGAMENTO ========== */
+    .payment-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem 4rem;
+      background: white;
+      padding: 3rem 2rem;
+      box-shadow: var(--sombra-light);
+    }
+
+    .payment-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 2.2rem;
+      color: var(--dourado-escuro);
+    }
+    .payment-item span {
+      font-size: 0.9rem;
+      color: var(--preto-elegante);
+      letter-spacing: 1px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* ========== POLÍTICA AGENDAMENTO (conforme print) ========== */
+    .policy-card {
+      background: white;
+      padding: 2.5rem;
+      box-shadow: var(--sombra-light);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .policy-card h3 {
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--preto);
+      margin-bottom: 1.5rem;
+      border-left: 3px solid var(--dourado-suave);
+      padding-left: 1rem;
+    }
+
+    .policy-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      color: #4e4842;
+      font-size: 1.1rem;
+      background: #f9f3ed;
+      padding: 1.8rem;
+    }
+
+    /* ========== LOCALIZAÇÃO / CONTATO (fiel ao print) ========== */
+    .location-card {
+      background: white;
+      padding: 2rem;
+      box-shadow: var(--sombra-light);
+      max-width: 700px;
+      margin: 2rem auto 0;
+    }
+
+    .location-img {
+      width: 100%;
+      height: 220px;
+      background: #cfc1b4;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 220%22><rect width=%22400%22 height=%22220%22 fill=%22%23bbaa99%22/><text x=%2250%22 y=%22110%22 fill=%22%23fff%22 font-size=%2220%22>ESTÚDIO</text></svg>');
+      background-size: cover;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-line {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 1.1rem;
+      margin: 0.8rem 0;
+      color: var(--preto-elegante);
+    }
+
+    .contact-line a {
+      text-decoration: none;
+      color: inherit;
+      border-bottom: 1px dotted var(--dourado-suave);
+    }
+
+    .cta-touch {
+      background: var(--bege-claro);
+      padding: 0.6rem;
+      text-align: center;
+      margin-top: 1rem;
+      font-style: italic;
+    }
+
+    /* ========== PROVA SOCIAL ========== */
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 2.5rem 0;
+    }
+
+    .proof-item {
+      background: white;
+      padding: 2rem;
+      box-shadow: var(--sombra-light);
+    }
+    .proof-item p {
+    font-size: clamp(1.15rem, 2.5vw, 1.35rem);
+    line-height: ;
+    color: #333;
+    }
+    .stars {
+      color: var(--dourado-escuro);
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ========== OFERTA FINAL ========== */
+    .final-offer {
+      background: var(--bege-claro);
+      padding: 4rem 2rem;
+      text-align: center;
+      border-top: 2px solid var(--dourado-suave);
+      border-bottom: 2px solid var(--dourado-suave);
+    }
+
+.price{
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  line-height: 1.1;
+}
+
+/* PREÇO ANTIGO */
+.price-old{
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  text-decoration: line-through;
+  color: #8c8378;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+/* PREÇO ATUAL (DESTAQUE) */
+.price-now{
+  font-size: clamp(3rem, 6vw, 4.2rem);
+  font-weight: 400;
+  color: #1f1f1f;
+  letter-spacing: -1px;
+}
+
+/* PARCELAMENTO */
+.price-installments{
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: #a09283;
+  margin-left: 0.5rem;
+}
+
+    .price small {
+      font-size: 1.2rem;
+      color: var(--cinza-suave);
+    }
+
+    .offer-badge {
+      background: var(--preto-elegante);
+      color: white;
+      padding: 0.2rem 2rem;
+      display: inline-block;
+      margin: 1.5rem 0;
+      letter-spacing: 2px;
+    }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      font-family: 'Times New Roman', Times, serif;
+      background: var(--preto);
+      color: #bfb6ad;
+      padding: 2.5rem;
+      text-align: center;
+    }
+
+/* ========== RESPONSIVIDADE ========== */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero-mockup { margin-top: 2rem; }
+      .preview-grid, .proof-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 600px) {
+      .preview-grid, .proof-grid { grid-template-columns: 1fr; }
+      .payment-grid { gap: 2rem; }
+    }
+
+    /* ========== ANIMAÇÕES ========== */
+    .fade-in {
+      animation: fadeUp 0.9s ease;
+    }
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    section { animation: fadeUp 1s ease; }
+
+.hero-mockup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-mockup img {
+  max-width: 140%;
+  max-height: 550px;
+  height: auto;
+  object-fit: contain;
+}
+
+.benefit-icon {
+  color: #c9a86a;
+  margin-right: 12px;
+  font-size: 1.3rem;
+}
+
+.highlight-quote { margin: 4rem 0; }
+
+.highlight-quote-inner{
+  display:flex;
+  align-items:center;
+  gap:2rem;
+}
+
+.quote-line{
+  width:6px;
+  height:100px;
+  background:#4a4a4a;
+  border-radius:3px;
+}
+
+.quote-text{
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1rem, 5vw, 2rem);
+  font-weight: 400;
+  color:#2b2b2b;
+  line-height:1.2;
+}
+
+/* Seção preview estilo Instagram */
+.preview-section{
+  text-align: center;
+  padding: 2.8rem 0;
+}
+
+/* Badge topo */
+.preview-badge{
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid rgba(120, 105, 80, 0.55);
+  border-radius: 999px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: #6c5e47;
+  margin-bottom: 1.6rem;
+}
+
+/* Títulos CAPA / PÁG... */
+.preview-title{
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  letter-spacing: 2px;
+  color: #6c5e47;
+  margin-bottom: 1.4rem;
+  text-transform: uppercase;
+}
+
+/* Card capa central */
+.cover-card{
+  width: min(78vw, 340px);
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+.cover-card img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========== PRÉVIA (seta + carrossel peek) ========== */
+
+/* Seta */
+.preview-arrow{
+  margin: 1.6rem 0;
+  font-size: 2.2rem;
+  line-height: 1;
+  color: #6c5e47;
+  text-align: center;
+}
+
+/* Carrossel "peek" (centro grande + laterais aparecendo) */
+.preview-peek{
+  display: flex;
+  gap: 16px;                 /* espaço entre as fotos */
+  overflow-x: auto;
+  overflow-y: hidden;        /* evita “vazar” vertical */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  /* isso cria o "peek" das laterais */
+  padding: 10px 18px 22px;
+  margin: 0 auto;
+}
+
+/* Barra de scroll discreta (Chrome/Safari/Edge) */
+.preview-peek::-webkit-scrollbar{
+  height: 8px;
+}
+.preview-peek::-webkit-scrollbar-thumb{
+  background: rgba(0,0,0,0.18);
+  border-radius: 999px;
+}
+
+/* Card */
+.peek-card{
+  flex: 0 0 auto;
+
+  /* Tamanho do card principal */
+  width: min(78vw, 360px);
+
+  scroll-snap-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.10);
+}
+
+/* Imagem dentro do card */
+.peek-card img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* (Opcional) Melhor toque no mobile: área de scroll mais "macia" */
+@media (max-width: 480px){
+  .preview-peek{
+    padding: 10px 14px 18px;
+    gap: 14px;
+  }
+  .peek-card{
+    width: min(86vw, 360px); /* deixa maior no celular */
+  }
+}
